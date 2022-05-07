@@ -17,6 +17,8 @@ import useCurrentSpace from '../../../hooks/useCurrentSpace'
 import useCurrentNetwork from '../../../hooks/useCurrentNetwork'
 import useIsNetworkMatch from '../../../hooks/useIsNetworkMatch'
 
+import { useNavigate } from 'react-router-dom' //hypnos
+
 // const { Option } = Select hypnos
 const { Header } = Layout
 const isTest = isTestNetEnv()
@@ -46,36 +48,37 @@ function HeaderComp() {
         return result
     }
 
+    // hypnos+l
+    let navigate = useNavigate()
+    // hypnos+c
+    const onClickNet = ({ key }) => {
+        navigate(key)
+    }
     // hypnos+n
     const networks = (
         <Menu
+            onClick={onClickNet}
             items={[
                 {
-                    label: (
-                        <a rel="noopener noreferrer" href="../../pool/core/0x874b44da0addd8acfbe018f82aab741b57e176f5">
-                            Core
-                        </a>
-                    ),
+                    label: 'Conflux Core',
+                    key: '/pool/core/0x874b44da0addd8acfbe018f82aab741b57e176f5'
                 },
                 {
-                    label: (
-                        <a rel="noopener noreferrer" href="../../pool/e-space/0xa3a9d461FDb27A8F798E2c93256537625F069c7b?coreAddress=0x874b44da0addd8acfbe018f82aab741b57e176f5">
-                            eSpace
-                        </a>
-                    ),
+                    label: 'Conflux eSpace',
+                    key: '/pool/e-space/0xa3a9d461FDb27A8F798E2c93256537625F069c7b?coreAddress=0x874b44da0addd8acfbe018f82aab741b57e176f5'
                 },
             ]}
         />
     )
 
     // hypnos+c
-    const onClick = ({ key }) => {
+    const onClickLang = ({ key }) => {
         i18n.changeLanguage(key)
     }
     // hypnos+l
     const langs = (
         <Menu
-            onClick={onClick}
+            onClick={onClickLang}
             items={[
                 {
                     label: 'English',
@@ -127,14 +130,14 @@ function HeaderComp() {
                             </div>
                         </Dropdown>
                         {currentSpace && address &&
-                            <Tag className="w-[222px] text-center" style={{ backgroundColor: "#546FFF" }}>
+                            <Tag className="w-[245px] text-center" style={{ backgroundColor: "#546FFF" }}>
                                 <ul className="font-medium text-base my-[9px]">
                                     <li style={{ color: "#44D7B6", listStyleType: "disc", listStylePosition: "inside" }}>
                                         <span style={{ color: "white", marginLeft: "-5px" }}>{ellipsisAddr(address)}</span>
                                     </li>
                                 </ul>
                             </Tag>}
-                        {currentSpace && !address && <Button className="mr-4 w-[222px]" style={{ border: "1px solid #546FFF", color: "#546FFF", height: 40 }} onClick={tryActivate}>{t(currentSpace === 'core' ? 'Header.connect_fluent' : 'Header.connect_metamask')}</Button>}
+                        {currentSpace && !address && <Button className="mr-4 w-[245px]" style={{ border: "1px solid #546FFF", color: "#546FFF", height: 40 }} onClick={tryActivate}>{t(currentSpace === 'core' ? 'Header.connect_fluent' : 'Header.connect_metamask')}</Button>}
                         {/* hypnos+d */}
                         <Dropdown overlay={networks} placement="bottom">
                             <Button className="mr-4 w-[150px]" style={{ border: "1px solid #546FFF", color: "#546FFF", height: 40 }}>Switch Network</Button>
