@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a6f3fa5d.chunk.css",
+    "main.js": "/static/js/main.effc6d43.chunk.js",
+    "main.js.map": "/static/js/main.effc6d43.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.916e721f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.916e721f.js.map",
+    "static/css/2.38d1bbab.chunk.css": "/static/css/2.38d1bbab.chunk.css",
+    "static/js/2.829a82b7.chunk.js": "/static/js/2.829a82b7.chunk.js",
+    "static/js/2.829a82b7.chunk.js.map": "/static/js/2.829a82b7.chunk.js.map",
+    "static/js/3.6875856e.chunk.js": "/static/js/3.6875856e.chunk.js",
+    "static/js/3.6875856e.chunk.js.map": "/static/js/3.6875856e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.38d1bbab.chunk.css.map": "/static/css/2.38d1bbab.chunk.css.map",
+    "static/css/main.a6f3fa5d.chunk.css.map": "/static/css/main.a6f3fa5d.chunk.css.map",
+    "static/js/2.829a82b7.chunk.js.LICENSE.txt": "/static/js/2.829a82b7.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Vietnam.e4325c66.svg",
+    "static/media/global.b9706118.svg": "/static/media/global.b9706118.svg",
+    "static/media/lang.2c683e02.svg": "/static/media/lang.2c683e02.svg",
+    "static/media/not-allow.ecffa81e.png": "/static/media/not-allow.ecffa81e.png",
+    "static/media/tips.1ade0b7d.svg": "/static/media/tips.1ade0b7d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.916e721f.js",
+    "static/css/2.38d1bbab.chunk.css",
+    "static/js/2.829a82b7.chunk.js",
+    "static/css/main.a6f3fa5d.chunk.css",
+    "static/js/main.effc6d43.chunk.js"
+  ]
+}
