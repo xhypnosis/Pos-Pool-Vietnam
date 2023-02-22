@@ -580,8 +580,8 @@ function Pool() {
                       onClick={() => {
                         checkNetwork(() => setStakeModalShown(true))
                       }}
-                      disabled={isLoading || stakeBtnDisabled}
-                      //   disabled="true"
+                      // disabled={isLoading || stakeBtnDisabled}
+                      disabled="true"
                     >
                       {t('Pool.stake')}
                     </Button>
